@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: myFont;
+    src: url(../fichier_police_perso/ecriture_style_mario.otf);
+}
+@font-face {
+    font-family: myFont1;
+    src: url(../fichier_police_perso/Pixel.ttf);
+}
+:root {
+  --very-dark-blue: #0a0a23;
+  --white: #ffffff;
+  --yellow: #f1be32;
+  --golden-yellow: #feac32;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  background-image: url("https://blog.sklambert.com/wp-content/uploads/2012/09/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  overflow-x: hidden; 
+  color: var(--white);
+  /* https://blog.sklambert.com/wp-content/uploads/2012/09/bg.png */
+  /* https://static1.srcdn.com/wordpress/wp-content/uploads/2022/10/hunter-x-hunter-return-confirmed.jpg */
+  /* https://www.japanfm.fr/wp-content/uploads/2023/07/R-scaled.jpg */
+  /* https://leclaireur.fnac.com/wp-content/uploads/2022/05/hunter-x-hunter.jpeg */
+  /* https://bleachmx.fr/wp-content/uploads/DFeHJxbXkAAInSQ1-e1537359445357.jpg */
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-family: myFont;
+  font-size: 60px;
+  background: linear-gradient(#fecc4c, rgba(255, 55, 0, 0.968));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 4s linear 0s 1 alternate sun-rise;
+}
+
+h2{
+    font-family: myFont1;
+    font-size: 0.9em;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+  color: var(--very-dark-blue);
+  background-color: var(--golden-yellow);
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border-color: var(--golden-yellow);
+  border-width: 3px;
+}
+
+.btn:hover {
+  background-image: linear-gradient(#ffcc4c, #f89808);
+}
+
+.rules-container {
+  padding: 0;
+  margin: auto;
+  border-radius: 15px;
+  border: 5px solid var(--yellow);
+  background-image: url("https://www.hebergeur-image.com/upload/154.72.171.220-668829d8d45e0.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+#sum{
+    font-weight: bolder;
+    font-size: larger;
+}
+summary{
+    background-color: var(--yellow);
+    color: var(--very-dark-blue);
+    margin: auto;
+    border-radius: 50px;
+}
+summary:hover{
+  background-color: var(--golden-yellow);
+  background-image: linear-gradient(#fecc4c, #ffac33);
+}
+.rules-container ul {
+  list-style-type: none;
+}
+.rules-container p {
+  margin: 10px 0;
+}
+
+.rules-container p, ul{
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--white);
+  text-shadow: 0px 0px 4px black;
+}
+
+.emoji{
+    display: inline-block;
+    font-size: 50px;
+}
+#winner-msg{
+  margin:0;
+}
+#player-score, #computer-score{
+  background: linear-gradient(#fecc4c, rgba(255, 55, 0, 0.968));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+  text-shadow: 1px 1px rgba(255, 68, 0, 0.712);
+}
+
+#ppc{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 4px black;
+}
+.rps{
+    font-size: 11rem;
+    margin: 0;
+}
+#playerEmoji{
+    transform: rotate(90deg);
+
+}
+#computerEmoji{
+    transform: rotate(-90deg);
+
+}
+#option{
+    margin: 0 5%;
+}
+
+#results-msg{
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+#ButtonHead{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#toggleButton, #changeBackgroundBtn{
+    font-size: xx-large;
+    border-radius: 5px;
+}
+
+#toggleButton:hover, #changeBackgroundBtn:hover{
+    background-color: purple;
+}
+
+
+#toggleButton{
+    margin:0px 5px;
+}
+
+#rocpa{
+    height: 10rem;
+    width: auto;
+}
+#runner{
+    position: absolute;
+    height: 75px;
+    bottom: 3px;
+    margin: 0px;
+    animation: 20s linear 0s infinite  LeftRight;
+}
+
+#myNameIsBest{
+    position: absolute;
+    height: 0px;
+    bottom: 3px;
+    margin: 0px;
+    animation: 20s linear 1s infinite  LeftRightName;
+}
+video{
+  width: 50%;
+  height: 1%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: var(--golden-yellow);
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border-color: var(--golden-yellow);
+  border-width: 3px;
+  box-shadow: 0px 0px 10px #fecc4c;
+}
+#resultVideo{
+  display: none;
+}
+#resultVideoW{
+  display: none;
+}
+@keyframes sun-rise {
+    from {
+      transform: translateY(110vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+@keyframes sun {
+    from {
+    transform: translatex(-110vh);
+    }
+    to {
+    transform: translatex(0);
+    }
+} 
+@keyframes moon {
+    from {
+    transform: translatex(110vh);
+    }
+    to {
+    transform: translatex(0);
+    }
+} 
+@media (min-width: 760px) {
+  .rules-container {
+    width: 60%;
+  }
+}
+@keyframes LeftRight {
+    0% {
+      transform: translatex(-110vh) scaleX(-1);
+    }
+    50% {
+      transform: translatex(150vh) scaleX(-1);
+    }
+    51%{
+      transform: translatex(110vh);
+    }
+    100%{
+      transform: translatex(-150vh);
+    }
+  }
+  @keyframes LeftRightName {
+    0% {
+      height: 60px;
+      transform: translatex(-110vh);
+    }
+    50% {
+      height: 60px;
+      transform: translatex(150vh);
+    }
+    51%{
+      height: 60px;
+      transform: translatex(110vh);
+    }
+    100%{
+      height: 60px;
+      transform: translatex(-150vh);
+    }
+  }
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  font-size: 1rem;
+  font-family: myFont1;
+  text-shadow: 0px 0px 4px black;
+  padding: 0;
+  
+}
+
+.score {
+  font-weight: 500;
+}
+
+.results-container {
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+
+#winner-msg {
+  margin-top: 25px;
+}
+
+#reset-game-btn {
+  display: none;
+  margin: 20px auto;
+}
