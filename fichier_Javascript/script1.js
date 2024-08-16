@@ -10,6 +10,14 @@ function SwitchImg(){
   counter = (counter+1) % ImgLeft.length;
 }
 
+// gestion du song que je yamo mal dans hunter hunter
+// window.addEventListener('load', function() {
+//   var audio = document.getElementById('song');
+//   audio.play().catch(function(error) {
+//       console.log('Autoplay was prevented:', error);
+//   });
+// });
+
 setInterval(SwitchImg, 5000);
 
 const audio = document.getElementById('song');
