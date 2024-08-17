@@ -11,12 +11,12 @@ function SwitchImg(){
 }
 
 // gestion du song que je yamo mal dans hunter hunter
-// window.addEventListener('load', function() {
-//   var audio = document.getElementById('song');
-//   audio.play().catch(function(error) {
-//       console.log('Autoplay was prevented:', error);
-//   });
-// });
+window.addEventListener('load', function() {
+  var audio = document.getElementById('song');
+  audio.play().catch(function(error) {
+      console.log('Autoplay was prevented:', error);
+  });
+});
 
 setInterval(SwitchImg, 5000);
 
